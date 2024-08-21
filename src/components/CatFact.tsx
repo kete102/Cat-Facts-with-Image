@@ -17,7 +17,7 @@ export default function CatFact() {
         height={500}
       />
       <article>
-        <p className="text-lg font-mono max-w-md text-wrap">{fact}</p>
+        {fact && <p className="text-lg font-mono max-w-md text-wrap">{fact}</p>}
         <button
           onClick={handleClick}
           className="mt-6 border border-white p-3 font-bold text-lg"
