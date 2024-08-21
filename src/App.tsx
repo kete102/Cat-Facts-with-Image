@@ -1,9 +1,9 @@
 import { useFacts } from "./hooks/useFacts"
-import { getCatImg } from "./hooks/useCatImg"
+import { useCatImage } from "./hooks/useCatImg"
 
 function App() {
   const { fact, fetchNewFact } = useFacts()
-  const { catImageUrl } = getCatImg(fact)
+  const { catImageUrl } = useCatImage(fact)
 
   const handleClick = () => {
     fetchNewFact()

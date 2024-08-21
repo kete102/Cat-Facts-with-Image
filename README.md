@@ -1,54 +1,35 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# Cat Facts Image Generator 🐱
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview 📋
 
-Currently, two official plugins are available:
+This project fetches a random cat fact and generates a custom cat image based on the first three words of the fact. The generated cat image is personalized with the words extracted from the fact.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features 🌟
 
-## Expanding the ESLint configuration
+- Fetches random cat facts.
+- Generates cat images based on the first three words of a fact.
+- Uses the [Cataas API](https://cataas.com) to generate fun cat images.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack 💻
 
-- Configure the top-level `parserOptions` property like this:
+- **TypeScript:** For type-safe JavaScript code.
+- **React:** User interface framework.
+- **Fetch API:** For making HTTP requests to the Cataas service.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Project Structure 🗂️
+
+```plaintext
+
+
+src/
+├── hooks/
+│   ├── useCatImg.ts        # Custom hook to fetch and manage the cat image URL
+│   └── useFact.ts          # Custom hook to fetch and manage the cat facts
+├── services/
+│   ├── catImage.ts         # Service function to handle the cat image API request
+│   └── facts.ts            # Service function to handle the cat facts API request
+├── components/
+│   └── CatFact.tsx         # Main component that displays the cat fact and image
+└── App.tsx                 # Root component of the React application
+
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-=======
-# Cat-Facts-with-Image
->>>>>>> c47843af46ef5354d0c004aa70264b6250aa124c
