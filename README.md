@@ -33,3 +33,5 @@ src/
 └── App.tsx                 # Root component of the React application
 
 ```
+
+## Getting Started 🚀
